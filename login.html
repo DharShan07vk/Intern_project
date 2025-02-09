@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Posters</title>
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <form id="loginForm" class="form active">
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        </div>
+        <h2>Welcome back</h2>
+        <p class="subtitle">Please enter your details to sign in</p>
+
+        <div class="input-group">
+          <label for="loginEmail">Email address</label>
+          <div class="input-container">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-container">
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+        </div>
+
+        <div class="forgot-password">
+          <a href="#" class="link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Sign in
+          <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <p class="toggle-text">
+          Don't have an account? <a href="#" onclick="toggleForm(event)" class="link">Sign up</a>
+        </p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="form">
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        </div>
+        <h2>Create account</h2>
+        <p class="subtitle">Enter your information to get started</p>
+
+        <div class="input-group">
+          <label for="signupName">Full Name</label>
+          <div class="input-container">
+            <input type="text" id="signupName" placeholder="Name" required>
+            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="signupEmail">Email address</label>
+          <div class="input-container">
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="signupPassword">Password</label>
+          <div class="input-container">
+            <input type="password" id="signupPassword" placeholder="••••••••" required>
+            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Create account
+          <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <p class="toggle-text">
+          Already have an account? <a href="#" onclick="toggleForm(event)" class="link">Sign in</a>
+        </p>
+      </form><button onclick="window.location.href='index.html'" id  = "back">Back To Home</button>
+    </div>
+
+    <p class="footer">
+      By continuing, you agree to our
+      <a href="#" class="link">Terms of Service</a>
+      and
+      <a href="#" class="link">Privacy Policy</a>
+    </p>
+  </div>
+
+  <script>
+    function toggleForm(e) {
+      e.preventDefault();
+      document.getElementById('loginForm').classList.toggle('active');
+      document.getElementById('signupForm').classList.toggle('active');
+    }
+  </script>
+  
+</body>
+</html>

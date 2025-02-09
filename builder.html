@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeSprint - Build Your Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                <span>ResumeSprint</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html" class="button">Log In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="builder-container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Build Your Resume</h2>
+                <div class="template-info">Template: <span id="templateName">Modern</span></div>
+            </div>
+
+            <form id="resumeForm" class="resume-form">
+                <section class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="input-grid">
+                        <input type="text" name="fullName" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>Skills</h3>
+                    <textarea name="skills" placeholder="Add your skills here" rows="4" required></textarea>
+                </section>
+
+                <section class="form-section">
+                    <h3>Work Experience</h3>
+                    <textarea name="experience" placeholder="Describe your work experience" rows="6"></textarea>
+                </section>
+
+                <section class="form-section">
+                    <h3>Education</h3>
+                    <textarea name="education" placeholder="Add your education details" rows="4"></textarea>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                        Preview & Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
