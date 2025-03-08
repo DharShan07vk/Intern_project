@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link href="{% static './loginstyle.css' %}" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <form id="loginForm" class="form active" method="POST">
+        {% csrf_token %}
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        </div>
+        <h2>Welcome back</h2>
+        <p class="subtitle">Please enter your details to sign in</p>
+        
+        <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color:red;">{{ message }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="input-group">
+          <label for="loginEmail" >Username</label>
+          <div class="input-container">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-container">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+        </div>
+
+        <div class="forgot-password">
+          <a href="#" class="link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Sign in
+        </button>
+    <p class="toggle-text">
+      Don't have an account? <a href="register"   class="link">Sign up</a>
+    </p>
+  </form>
+
+  
+    </p>
+  </form><p class="footer">
+  By continuing, you agree to our
+  <a href="#" class="link">Terms of Service</a>
+  and
+  <a href="#" class="link">Privacy Policy</a>
+</p>
+</div>
+  <script src="{% static './script.js' %}"></script>
+</body>
+</html>

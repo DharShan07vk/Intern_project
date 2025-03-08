@@ -1,0 +1,53 @@
+{% load static %}  <!-- Load Django's static tag -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Posters</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">  <!-- Fix CSS Link -->
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">ResumeSprint</div>
+      <nav class="nav">
+        <a href="index">Home</a>
+        <a href="create-resume">Resumes</a>
+        <a href="resume">Resume Preview</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Transform Your Resume in 7 Days</h1>
+    <p>Join our expert-led sprint to stand out.</p>
+    <button onclick="window.location.href='resume'" class="get-started">Get Started</button>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="benefit">
+      <img src="{% static 'images/conta.jpg' %}" alt="Expert Guidance">
+      <h3>Expert Guidance</h3>
+      <p>Work with seasoned professionals.</p>
+    </div>
+    <div class="benefit">
+      <img src="{% static 'images/ats.jpg' %}" alt="ATS Compatibility">
+      <h3>ATS Compatibility</h3>
+      <p>Resumes optimized for job portals.</p>
+    </div>
+    <div class="benefit">
+      <img src="{% static 'images/ps.jpg' %}" alt="Proven Success">
+      <h3>Proven Success</h3>
+      <p>Join others who've landed interviews.</p>
+    </div>
+  </section>
+
+</body>
+</html>
