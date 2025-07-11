@@ -11,7 +11,7 @@
 ## Installation 📦
 ### To install Django Music Player, follow these steps:
 ## 1. Clone this repository:
->'https://github.com/BurhanMohammad/Django-Resume-Bulider.git'
+>'https://github.com/DharShan07vk/Intern_project.git'
 ## 2. Navigate to the project directory:
 
 ```bash
